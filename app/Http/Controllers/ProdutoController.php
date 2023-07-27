@@ -78,10 +78,12 @@ class ProdutoController extends Controller
             "precoVenda" => "required",
         ]);
 
-        Produto::update($request->all());
+        $produto->update($request->all());
 
         return redirect()->route("produtos.index")->with("success", "Produto atualizado com sucesso.");
     }
+
+
 
     /**
      * Remove the specified resource from storage.
